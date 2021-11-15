@@ -1,0 +1,142 @@
+body {
+  @apply bg-gray-400;
+}
+
+input:disabled,
+select:disabled,
+input:read-only,
+/*select:read-only,*/
+button:disabled {
+  @apply bg-blueGray-200;
+  @apply placeholder-blueGray-300;
+  @apply text-blueGray-600;
+}
+
+[type='text'],
+[type='email'],
+[type='url'],
+[type='password'],
+[type='number'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='week'],
+[multiple],
+textarea, .textarea,
+select {
+  @apply border-0;
+  @apply px-3;
+  @apply py-3;
+  @apply text-blueGray-600;
+  @apply bg-blueGray-400;
+  @apply text-sm;
+  @apply shadow;
+  @apply w-full;
+  @apply ease-linear;
+  @apply transition-all;
+  @apply duration-150;
+  @apply text-black;
+  @apply placeholder-blueGray-300;
+
+  &.smaller {
+    @apply py-1;
+  }
+}
+
+[type='text']:focus,
+[type='email']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='number']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[multiple]:focus,
+textarea:focus, .textarea:focus,
+select:focus {
+  @apply outline-none;
+  @apply ring;
+}
+
+label {
+  @apply block;
+  @apply uppercase;
+  @apply text-blueGray-600;
+  @apply text-xs;
+  @apply font-bold;
+  @apply mb-2;
+}
+
+.inputWithIcon,
+.sioSearchBox {
+  input {
+    /* Make room for the search box icon */
+    @apply pl-10;
+  }
+}
+
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  @apply block;
+  @apply pointer-events-none;
+  @apply text-blueGray-300;
+}
+
+div.sioEditorPreview {
+  @apply prose prose-sm prose-indigo max-w-full;
+  @apply text-blueGray-600 bg-blueGray-200;
+}
+
+button {
+  @apply bg-blueGray-700;
+  @apply text-white;
+  @apply font-bold;
+  @apply uppercase;
+  @apply text-sm;
+  @apply shadow;
+  @apply outline-none;
+  @apply px-6;
+  @apply py-3;
+  @apply mr-1;
+  @apply mb-1;
+  @apply ease-linear;
+  @apply transition-all;
+  @apply duration-150;;
+
+  &.success {
+    @apply bg-emerald-500
+  }
+
+  &.tiny {
+    @apply p-1 m-0;
+    text-align: center;
+  }
+
+  &.closeModal {
+    @apply shadow-none;
+    @apply px-0;
+    @apply py-0;
+    @apply mr-0;
+    @apply mb-0;
+    @apply absolute;
+    @apply p-3;
+    @apply top-0;
+    @apply right-0;
+    @apply text-2xl;
+    @apply text-blueGray-500;
+    @apply leading-none;
+
+    background-color: transparent;
+    &:focus {
+      @apply outline-none;
+      @apply ring-0;
+    }
+  }
+}
