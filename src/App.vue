@@ -1,6 +1,5 @@
-<script setup>
-</script>
+<script setup></script>
 
-<template lang='pug'>
+<template lang="pug">
 div#app: router-view
 </template>

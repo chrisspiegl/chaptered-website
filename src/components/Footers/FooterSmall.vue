@@ -3,7 +3,7 @@ export default {
   data() {
     return {
       date: new Date().getFullYear(),
-    };
+    }
   },
   props: {
     absolute: {
@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<template lang='pug'>
+<template lang="pug">
 footer.pb-6(:class="[absolute ? 'absolute w-full bottom-0 bg-blueGray-800' : 'relative']")
   .container.mx-auto.px-4
     //- hr.mb-6.border-b-1.border-blueGray-600
@@ -37,4 +37,3 @@ footer.pb-6(:class="[absolute ? 'absolute w-full bottom-0 bg-blueGray-800' : 're
         .text-sm.text-blueGray-500.font-semibold.py-1.text-center(class='md:text-left')
           | Copyright &copy; {{ date }} Foxi.Link
 </template>
-

@@ -1,4 +1,4 @@
-<template lang='pug'>
+<template lang="pug">
 footer.relative.bg-blueGray-200.pt-8.pb-6
   .bottom-auto.top-0.left-0.right-0.w-full.absolute.pointer-events-none.overflow-hidden.-mt-20.h-20(style='transform: translateZ(0);')
     svg.absolute.bottom-0.overflow-hidden(xmlns='http://www.w3.org/2000/svg' preserveaspectratio='none' version='1.1' viewbox='0 0 2560 100' x='0' y='0')
@@ -67,7 +67,7 @@ export default {
   data() {
     return {
       date: new Date().getFullYear(),
-    };
+    }
   },
-};
+}
 </script>

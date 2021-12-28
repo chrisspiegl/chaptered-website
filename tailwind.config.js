@@ -1,5 +1,5 @@
-const plugin = require('tailwindcss/plugin');
-const colors = require('tailwindcss/colors');
+const plugin = require('tailwindcss/plugin')
+const colors = require('tailwindcss/colors')
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
@@ -84,20 +84,7 @@ module.exports = {
       }),
     },
   },
-  variantOrder: [
-    'responsive',
-    'group-hover',
-    'focus-within',
-    'first',
-    'last',
-    'odd',
-    'even',
-    'hover',
-    'focus',
-    'active',
-    'visited',
-    'disabled',
-  ],
+  variantOrder: ['responsive', 'group-hover', 'focus-within', 'first', 'last', 'odd', 'even', 'hover', 'focus', 'active', 'visited', 'disabled'],
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
@@ -105,7 +92,7 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
     require('nightwind'),
     plugin(({ addComponents, theme }) => {
-      const screens = theme('screens', {});
+      const screens = theme('screens', {})
       addComponents([
         {
           '.container': { width: '100%' },
@@ -145,7 +132,7 @@ module.exports = {
             },
           },
         },
-      ]);
+      ])
     }),
   ],
-};
+}

@@ -1,5 +1,5 @@
 <script>
-import Error404Cat from "@/components/Error404Cat/Error404Cat.vue"
+import Error404Cat from '@/components/Error404Cat/Error404Cat.vue'
 
 export default {
   data() {
@@ -8,10 +8,10 @@ export default {
   components: {
     Error404Cat,
   },
-};
+}
 </script>
 
-<template lang='pug'>
+<template lang="pug">
 .h-screen.w-screen.bg-gray-100.flex.items-center
   .container.flex.flex-col.items-center.justify-center.px-5.text-gray-700(class='md:flex-row')
     .max-w-md

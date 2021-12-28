@@ -25,7 +25,8 @@ button:disabled {
 [type='time'],
 [type='week'],
 [multiple],
-textarea, .textarea,
+textarea,
+.textarea,
 select {
   @apply border-0;
   @apply px-3;
@@ -59,7 +60,8 @@ select {
 [type='time']:focus,
 [type='week']:focus,
 [multiple]:focus,
-textarea:focus, .textarea:focus,
+textarea:focus,
+.textarea:focus,
 select:focus {
   @apply outline-none;
   @apply ring;
@@ -82,7 +84,7 @@ label {
   }
 }
 
-[contenteditable=true]:empty:before{
+[contenteditable='true']:empty:before {
   content: attr(placeholder);
   @apply block;
   @apply pointer-events-none;
@@ -108,10 +110,10 @@ button {
   @apply mb-1;
   @apply ease-linear;
   @apply transition-all;
-  @apply duration-150;;
+  @apply duration-150;
 
   &.success {
-    @apply bg-emerald-500
+    @apply bg-emerald-500;
   }
 
   &.tiny {

@@ -29,12 +29,7 @@ export const userSettingsComputed = {
   ...mapState('userSettings', {
     userSettings: (state) => state.userSettings,
   }),
-  ...mapGetters('userSettings', [
-    'getUserSettingValueByKey',
-    'getUserSettingByKey',
-  ]),
+  ...mapGetters('userSettings', ['getUserSettingValueByKey', 'getUserSettingByKey']),
 }
 
-export const userSettingsMethods = mapActions('userSettings', [
-  'updateUserSettingByKey',
-])
+export const userSettingsMethods = mapActions('userSettings', ['updateUserSettingByKey'])

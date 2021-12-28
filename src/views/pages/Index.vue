@@ -1,4 +1,4 @@
-<template lang='pug'>
+<template lang="pug">
 div
   main.profile-page.bg-blueGray-200
     section.relative.py-16
@@ -103,9 +103,9 @@ div
   footer-component
 </template>
 <script>
-import FooterComponent from "@/components/Footers/Footer.vue";
+import FooterComponent from '@/components/Footers/Footer.vue'
 
-import {Chaptered} from 'chaptered'
+import { Chaptered } from 'chaptered'
 import ClipboardJS from 'clipboard'
 import Swal from 'sweetalert2'
 import { debounce } from 'throttle-debounce'
@@ -121,13 +121,13 @@ export default {
       markerFileType: 'empty',
       debugInfo: 'empty',
       chaptered: new Chaptered(),
-    };
+    }
   },
   computed: {
     ...mapState({
       formatter: (state) => {
         return merge({}, state.formatterOptions.formatterOptions)
-      }
+      },
     }),
     compiledMarkdown() {
       // return DOMPurify.sanitize(marked(this.input, {}))
@@ -143,7 +143,7 @@ export default {
         this.triggerChapteredRender()
         this.$store.commit('formatterOptions/SET_FORMATTER_OPTIONS', merge({}, this.formatter))
         console.log(`UPDATED WITH NEW TEXT`)
-      });
+      })
       debounceFunc(this, e)
     },
     triggerChapteredRender() {
@@ -152,8 +152,8 @@ export default {
         if (this.input === '') return
 
         const tt = this.formatter.timeTemplate
-        const includeLeadingHours = ['FullStamp', 'WithHours', 'WithHoursAndZeros'].includes(tt) ? 'always' : (['HourAndZeros', 'HoursOptionalAndLeadingZeroOnAll'].includes(tt)) ? 'hasHour' : 'never'
-        const includeLeadingZeros = ['FullStamp', 'Zeros', 'WithHoursAndZeros', 'HoursOptionalAndLeadingZeroOnAll'].includes(tt) ? 'always' : (['HoursOptionalAndLeadingZero'].includes(tt)) ? 'notHour' : 'never'
+        const includeLeadingHours = ['FullStamp', 'WithHours', 'WithHoursAndZeros'].includes(tt) ? 'always' : ['HourAndZeros', 'HoursOptionalAndLeadingZeroOnAll'].includes(tt) ? 'hasHour' : 'never'
+        const includeLeadingZeros = ['FullStamp', 'Zeros', 'WithHoursAndZeros', 'HoursOptionalAndLeadingZeroOnAll'].includes(tt) ? 'always' : ['HoursOptionalAndLeadingZero'].includes(tt) ? 'notHour' : 'never'
 
         // FullStamp = 00:31:08 | Full Timestamp
         // HourAndZeors = 00:31:08 | With Hours &amp; Leading Zeros
@@ -187,19 +187,19 @@ export default {
           },
         }
 
-        console.log('options: ', options);
+        console.log('options: ', options)
 
         const chapteredOutput = this.chaptered.setOptions(options).parse(this.input).sortRecords().output()
 
         this.output = chapteredOutput
-      } catch(e) {
+      } catch (e) {
         this.debugInfo = e
         console.error(e)
       }
-    }
+    },
   },
   created() {
     this.triggerChapteredRender()
-  }
-};
+  },
+}
 </script>

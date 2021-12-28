@@ -5,4 +5,3 @@ export * from './asArray'
 export * from './dispatchActionForAllModules'
 export * from './escapable'
 export * from './renameKeys'
-

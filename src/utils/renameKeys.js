@@ -6,8 +6,5 @@ import { asArray } from '@/utils'
 
 export const renameKeys = (keysMap, objs) => {
   objs = asArray(objs)
-  return objs.map((object) => Object.fromEntries(Object.keys(object).map(
-    (key) => [keysMap[key] || key, object[key]],
-  )),
-  )
+  return objs.map((object) => Object.fromEntries(Object.keys(object).map((key) => [keysMap[key] || key, object[key]])))
 }

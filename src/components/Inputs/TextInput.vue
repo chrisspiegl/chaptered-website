@@ -1,4 +1,4 @@
-<template lang='pug'>
+<template lang="pug">
 .TextInput(:class="{ 'has-error': !!errorMessage, success: meta.valid }")
   //- label(:for='name') {{ label }}
 
@@ -14,13 +14,13 @@
 </template>
 
 <script>
-import { useField } from "vee-validate";
+import { useField } from 'vee-validate'
 
 export default {
   props: {
     type: {
       type: String,
-      default: "text",
+      default: 'text',
     },
     name: {
       type: String,
@@ -35,11 +35,11 @@ export default {
     },
     value: {
       type: String,
-      default: "",
+      default: '',
     },
     successMessage: {
       type: String,
-      default: "",
+      default: '',
     },
   },
   setup(props) {
@@ -53,7 +53,7 @@ export default {
       meta,
     } = useField(props.name, undefined, {
       initialValue: props.value,
-    });
+    })
 
     return {
       handleChange,
@@ -61,22 +61,22 @@ export default {
       errorMessage,
       inputValue,
       meta,
-    };
+    }
   },
-};
+}
 </script>
 
 <style scoped>
 .TextInput.has-error input {
-  @apply bg-red-400
+  @apply bg-red-400;
 }
 
 .TextInput.has-error input:focus {
-  @apply bg-red-400
+  @apply bg-red-400;
 }
 
 .TextInput.has-error .help-message {
-  @apply text-red-500
+  @apply text-red-500;
 }
 
 .TextInput.success input {
@@ -88,6 +88,6 @@ export default {
 }
 
 .TextInput.success .help-message {
-  @apply text-green-500
+  @apply text-green-500;
 }
 </style>

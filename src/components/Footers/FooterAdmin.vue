@@ -1,4 +1,4 @@
-<template lang='pug'>
+<template lang="pug">
 footer.block.py-4(:class="[absolute ? 'absolute w-full bottom-0' : 'relative']")
   .mx-auto
     //- hr.mb-4.border-b-1.border-blueGray-200
@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       date: new Date().getFullYear(),
-    };
+    }
   },
   props: {
     absolute: {
@@ -32,5 +32,5 @@ export default {
       default: false,
     },
   },
-};
+}
 </script>

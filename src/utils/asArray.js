@@ -1,1 +1,1 @@
-export const asArray = (x) => Array.isArray(x) ? x : [x]
+export const asArray = (x) => (Array.isArray(x) ? x : [x])

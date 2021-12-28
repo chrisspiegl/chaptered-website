@@ -35,7 +35,7 @@ export const mutations = {
     if (['light', 'dark'].includes(newValue)) {
       state.darkMode = newValue
     } else {
-      state.darkMode = (newValue) ? 'dark' : 'light'
+      state.darkMode = newValue ? 'dark' : 'light'
     }
 
     if (state.darkMode === 'dark' && !document.documentElement.classList.contains('dark')) {

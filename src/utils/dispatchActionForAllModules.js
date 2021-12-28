@@ -1,13 +1,9 @@
-
 /* eslint-disable guard-for-in */
 
 import * as allModules from '@/store/modules'
 import { store } from '@/store'
 
-export function dispatchActionForAllModules(
-  actionName,
-  { modules = allModules, modulePrefix = '', flags = {} } = {},
-) {
+export function dispatchActionForAllModules(actionName, { modules = allModules, modulePrefix = '', flags = {} } = {}) {
   // For every module...
   for (const moduleName in modules) {
     const moduleDefinition = modules[moduleName]

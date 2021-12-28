@@ -13,5 +13,5 @@ export const actions = {
 }
 
 export const mutations = {
-  UPDATE_TIME: (state) => state.now = new Date(),
+  UPDATE_TIME: (state) => (state.now = new Date()),
 }
